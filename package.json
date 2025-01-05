@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "mongodb": "set \"path=%PATH%;C:\\Program Files\\MongoDB\\Server\\8.0\\bin\" & mongod --dbpath C:\\dev\\ocr\\ocr-mon-vieux-grimoire-back\\data\\db"
+    "mongodb": "set \"path=%PATH%;C:\\Program Files\\MongoDB\\Server\\8.0\\bin\" & mongod --bind_ip 127.0.0.1 --port 28001 --dbpath C:\\dev\\ocr\\ocr-mon-vieux-grimoire-back\\data\\db"
   },
   "dependencies": {
     "multer": "^1.0.0",
