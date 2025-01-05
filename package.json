@@ -1,0 +1,24 @@
+{
+  "name": "mon-vieux-grimoire",
+  "version": "1.0.0",
+  "description": "Mon vieux grimoire - Site de notation de livres",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+	 "mongodb": "set \"path=%PATH%;C:\\Program Files\\MongoDB\\Server\\8.0\\bin\" & mongod --dbpath C:\\dev\\ocr\\ocr-mon-vieux-grimoire-back\\data\\db"
+  },
+  "dependencies": {
+	 "dotenv": "^16.0.0",
+    "express": "^5.0.0",
+    "mongodb": "^6.0.0",
+    "mongoose": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  },
+  "keywords": [],
+  "author": "Joffrey Romero",
+  "license": ""
+}

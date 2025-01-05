@@ -1,0 +1,9 @@
+# dependencies
+node_modules
+# production
+build
+# misc
+.env
+/data/db/**
+npm-debug.log
+yarn.lock
