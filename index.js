@@ -1,6 +1,9 @@
 /* vim: set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab : */
 import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+import bookRoutes from './routes/book.routes.js';
 import mongodb from './services/mongodb-driver.service.js';
 import userRoutes from './routes/user.routes.js';
 import { config } from './core/config.js';
@@ -26,6 +29,12 @@ app.use(
 );
 
 app.use('/api/auth', userRoutes);
+app.use('/api/books', bookRoutes);
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use('/images', express.static(path.join(__dirname, 'images')))
 
 app.listen(
   port,
